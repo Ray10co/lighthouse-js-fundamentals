@@ -97,3 +97,122 @@ if(checkBalance === true && isActive === true && balance > 0) {
     checkBalance === false;
     console.log("Thank you. Have a nice day!");
 }
+
+
+// exercises in UDACITY
+
+var x = 10;
+while (x <= 25) {
+  console.log('Printing out x = ' + x);
+  x = x + 2;
+}
+
+/*
+// Looping over arrays
+
+const amounts = [61.00, 52.25, 112.99, 5.00];
+
+let total = 0;
+for (let i = 0; i < amounts.length; i++) {
+  total += amounts[i];
+}
+console.log('Order total is: ', total);
+
+*/
+
+
+
+// for...of loop over array
+
+
+const amounts = [61.00, 52.25, 112.99, 5.00];
+let total = 0;
+for(let amount of amounts) {
+total += amount;
+}
+console.log("order total is: ", total);
+
+
+// for x-marks the spot exercise
+
+let moves = ['north', 'north', 'west', 'west', 'north', 'east', 'north'];
+
+function finalPosition(moves) {
+  let parade = [0,0];
+  for (let amount of moves) {
+    switch (amount) {
+      case 'north':
+        parade[1] += 1;
+        break;
+      case 'west':
+        parade[0] -= 1;
+        break;
+      case 'east' :
+        parade[0] += 1;
+        break;
+      case 'south' :
+        parade[1] -= 1;
+        break;
+  
+    }
+  }
+  return parade;
+}
+console.log(finalPosition(moves));
+
+// function exercises
+
+function findAverage(x, y) {
+  var answer = (x + y) / 2;
+  return answer;
+}
+
+var avg = findAverage(5, 9);
+
+console.log(avg);
+
+
+// return & logging
+
+function sleep() {
+  console.log("I'm sleepy!");
+  return "zzz";
+  return "snore";
+}
+
+sleep();
+
+
+// scope librarian example
+
+let James = "I'm looking for this book...";
+function library(firstArgument){
+  let librarian = "oh, you'll want to look in the classic literature section, follow me!";
+  function classicLiterature(argument){
+    let book ="great experiences";
+    console.log(book + ' ' + firstArgument + ' ' + argument);
+  }
+  classicLiterature(James);
+}
+
+
+// build a line
+
+function makeLine(length) {
+  var line = "";
+  for (var j = 1; j <= length; j++) {
+    line += "* "
+  }
+  return line + "\n";
+}
+
+console.log(makeLine(10));
+
+function buildTriangle(x) {
+  let triangle = "";
+  for (let t = 1; t <= x; t++) {
+    triangle += makeLine(t)
+  }
+  return triangle;
+}
+console.log(buildTriangle(10));
