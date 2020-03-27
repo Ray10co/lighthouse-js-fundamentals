@@ -216,3 +216,22 @@ function buildTriangle(x) {
   return triangle;
 }
 console.log(buildTriangle(10));
+
+
+// age calculator
+
+function ageCalculator (name, yearOfBirth, currentYear) {
+  let age = currentYear - yearOfBirth;
+  return name + " is " + age + " years old."
+}
+console.log(ageCalculator("Ray", 1993, 2020));
+
+// how many hundreds 
+
+function howManyHundreds(num) {
+  let total = parseInt(num/100);
+  return total
+}
+console.log(howManyHundreds(560));
+
+// 
