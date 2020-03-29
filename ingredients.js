@@ -12,7 +12,7 @@ for(let b = 0; b < ingredients.length; b++) {
   console.log(ingredients[b]);
 }
 
-for (let e = ingredients.length; e >= 0; e--) {
+for (let e = ingredients.length -1; e >= 0; e--) {
   console.log(ingredients[e]);
 }
 
