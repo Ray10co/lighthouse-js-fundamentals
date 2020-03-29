@@ -241,7 +241,7 @@ function range (start, end, step) {
   for(let i = start; i <= end; i = i + step) {
     array.push(i); 
   }
-  if (start < end && end > start && step > 0) {
+if (typeof(start) === "number" && typeof(end) === "number" && start < end && end > start && typeof(step) === "number" && step > 0) {
     return array;
   } else {
     return [];
